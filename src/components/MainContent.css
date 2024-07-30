@@ -11,7 +11,9 @@
     padding: 15px;
     margin-bottom: 10px;
     border-radius: 5px;
-    background-color: #f9f9f9;
+    background-color: white;
+    margin-right: 10px;
+    margin-left: 10px;
 }
 
 h2 {

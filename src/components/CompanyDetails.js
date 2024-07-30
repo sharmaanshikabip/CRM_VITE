@@ -17,10 +17,59 @@ const CompanyDetails = () => {
         <div className="company-details">
             {company ? (
                 <>
-                    <h2>{company.name}</h2>
+                <div className="main-company-details">
+                <div className="company-details-1">
+                 <h2>{company.name}</h2>
                     <p><strong>Industry:</strong> {company.industry}</p>
                     <p><strong>Location:</strong> {company.location}</p>
                     <p>{company.details}</p>
+                 </div>
+                 <div className="section-details company-details-2 ">
+                    <h2 className="company-heading-2">Overview</h2>
+                    <div className="box-details">
+                        <h3>Data Highlights</h3>
+                        <p>Dummy data for box 1 in section 1.</p>
+                    </div>
+                    <div className="box-details">
+                        <h3>Recent Activities</h3>
+                        <p>Dummy data for box 2 in section 1.</p>
+                    </div>
+                    <div className="box-details">
+                        <h3>Contacts</h3>
+                        <p>Dummy data for box 2 in section 1.</p>
+                    </div>
+                    <div className="box-details">
+                        <h3>Companies</h3>
+                        <p>Dummy data for box 2 in section 1.</p>
+                    </div>
+                   
+                   </div>
+                   <div className="company-details-3">
+                   <div className="box-details-3">
+                        <h3>Data Highlights</h3>
+                        <p>Dummy data for box 1 in section 1.</p>
+                    </div>
+                    <div className="box-details-3">
+                        <h3>Data Highlights</h3>
+                        <p>Dummy data for box 1 in section 1.</p>
+                    </div>
+                    <div className="box-details-3">
+                        <h3>Data Highlights</h3>
+                        <p>Dummy data for box 1 in section 1.</p>
+                    </div>
+                    <div className="box-details-3">
+                        <h3>Data Highlights</h3>
+                        <p>Dummy data for box 1 in section 1.</p>
+                    </div>
+                    <div className="box-details-3">
+                        <h3>Data Highlights</h3>
+                        <p>Dummy data for box 1 in section 1.</p>
+                    </div>
+                   </div>
+                </div>
+                 
+                  
+                  
                 </>
             ) : (
                 <p>Company not found.</p>

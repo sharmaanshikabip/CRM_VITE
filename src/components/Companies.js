@@ -25,7 +25,8 @@ const Companies = () => {
 
     return (
         <div className="companies">
-            <h2>Companies</h2>
+            <div className="companies-main">
+            <h2> All Companies</h2>
             <input
                 type="text"
                 placeholder="Search..."
@@ -33,7 +34,7 @@ const Companies = () => {
                 onChange={(e) => setSearchQuery(e.target.value)}
                 className="search-input"
             />
-            <table>
+            <table className="companies-table">
                 <thead>
                     <tr>
                         <th></th>
@@ -58,6 +59,8 @@ const Companies = () => {
                     ))}
                 </tbody>
             </table>
+            </div>
+            
         </div>
     );
 };
