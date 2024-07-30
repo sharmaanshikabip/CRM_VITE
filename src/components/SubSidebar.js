@@ -8,13 +8,13 @@ const SubSidebar = forwardRef((props, ref) => {
             <nav>
                 <ul>
                     <li><Link to="/companies">Companies</Link></li>
-                    <li><a href="#">Contacts</a></li>
-                    <li><a href="#">Deals</a></li>
-                    <li><a href="#">Tickets</a></li>
-                    <li><a href="#">Lists</a></li>
-                    <li><a href="#">Inbox</a></li>
-                    <li><a href="#">Calls</a></li>
-                    <li><a href="#">Tasks</a></li>
+                    <li><Link to="/companies">Contacts</Link></li>
+                    <li><Link to="/companies">Tickets</Link></li>
+                    <li><Link to="/companies">Deals</Link></li>
+                    <li><Link to="/companies">Lists</Link></li>
+                    <li><Link to="/companies">Inbox</Link></li>
+                    <li><Link to="/companies">Calls</Link></li>
+                    <li><Link to="/companies">Tasks</Link></li>
                 </ul>
             </nav>
         </aside>

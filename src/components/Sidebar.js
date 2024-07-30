@@ -1,14 +1,16 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import './Sidebar.css';
 import SubSidebar from './SubSidebar';
 
 const Sidebar = () => {
     const [showSubSidebar, setShowSubSidebar] = useState(false);
     const subSidebarRef = useRef(null);
+    const navigate = useNavigate();
 
     const handleCRMClick = () => {
         setShowSubSidebar(!showSubSidebar);
+        navigate('/');
     };
 
     const handleClickOutside = (event) => {

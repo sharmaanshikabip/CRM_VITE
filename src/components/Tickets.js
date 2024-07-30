@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './Companies.css';
 
-const Companies = () => {
+const Tickets = () => {
     const [searchQuery, setSearchQuery] = useState('');
     const [companies] = useState([
         { id: 1, name: 'Company A', industry: 'Tech', location: 'New York' },
@@ -62,4 +62,4 @@ const Companies = () => {
     );
 };
 
-export default Companies;
+export default Tickets;
