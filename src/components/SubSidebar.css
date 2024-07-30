@@ -1,0 +1,25 @@
+.sub-sidebar {
+    background-color: #3a5f5f;
+    color: white;
+    width: 100px;
+    padding: 10px;
+    position: absolute;
+    left: 82px;
+    top: 0;
+    height: 100%;
+    z-index: 1000;
+}
+
+.sub-sidebar nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sub-sidebar nav ul li {
+    margin: 10px 0;
+}
+
+.sub-sidebar nav ul li a {
+    color: white;
+    text-decoration: none;
+}

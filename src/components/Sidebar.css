@@ -1,0 +1,25 @@
+.sidebar-container {
+    display: flex;
+    position: relative;
+}
+
+.sidebar {
+    background-color: #2f4f4f;
+    color: white;
+    width: 112px;
+    padding: 10px;
+}
+
+.sidebar nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar nav ul li {
+    margin: 10px 0;
+}
+
+.sidebar nav ul li a {
+    color: white;
+    text-decoration: none;
+}

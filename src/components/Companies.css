@@ -1,0 +1,29 @@
+.companies {
+    padding: 20px;
+    margin-left: 142px;
+}
+
+.companies h2 {
+    margin-bottom: 20px;
+}
+
+.search-input {
+    margin-bottom: 20px;
+    padding: 10px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.companies table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.companies table, th, td {
+    border: 1px solid black;
+}
+
+.companies th, td {
+    padding: 10px;
+    text-align: left;
+}
