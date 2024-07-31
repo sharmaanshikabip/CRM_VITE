@@ -1,0 +1,8 @@
+body {
+  font-size: 0.875rem;
+}
+
+.nav-link.active {
+  color: #007bff;
+}
+
