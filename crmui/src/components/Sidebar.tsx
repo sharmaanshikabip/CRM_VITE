@@ -1,194 +1,100 @@
-import React from "react";
+import React, { useState } from "react";
 
 const Sidebar = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+  };
+
   return (
-    <>
-      <div className="container-fluid">
-        <div className="row flex-nowrap">
-          <div className="col-auto col-md-3 col-xl-2 px-sm-2 px-0 bg-dark">
-            <div className="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white min-vh-100">
-              <a
-                href="/"
-                className="d-flex align-items-center pb-3 mb-md-0 me-md-auto text-white text-decoration-none"
-              >
-                <span className="fs-5 d-none d-sm-inline">Menu</span>
-              </a>
-              <ul
-                className="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start"
-                id="menu"
-              >
-                <li className="nav-item">
-                  <a href="#" className="nav-link align-middle px-0">
-                    <i className="fs-4 bi-house"></i>{" "}
-                    <span className="ms-1 d-none d-sm-inline">Home</span>
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#submenu1"
-                    data-bs-toggle="collapse"
-                    className="nav-link px-0 align-middle"
-                  >
-                    <i className="fs-4 bi-speedometer2"></i>{" "}
-                    <span className="ms-1 d-none d-sm-inline">Dashboard</span>{" "}
-                  </a>
-                  <ul
-                    className="collapse show nav flex-column ms-1"
-                    id="submenu1"
-                    data-bs-parent="#menu"
-                  >
-                    <li className="w-100">
-                      <a href="#" className="nav-link px-0">
-                        {" "}
-                        <span className="d-none d-sm-inline">Item</span> 1{" "}
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#" className="nav-link px-0">
-                        {" "}
-                        <span className="d-none d-sm-inline">Item</span> 2{" "}
-                      </a>
-                    </li>
-                  </ul>
-                </li>
-                <li>
-                  <a href="#" className="nav-link px-0 align-middle">
-                    <i className="fs-4 bi-table"></i>{" "}
-                    <span className="ms-1 d-none d-sm-inline">Orders</span>
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#submenu2"
-                    data-bs-toggle="collapse"
-                    className="nav-link px-0 align-middle "
-                  >
-                    <i className="fs-4 bi-bootstrap"></i>{" "}
-                    <span className="ms-1 d-none d-sm-inline">Bootstrap</span>
-                  </a>
-                  <ul
-                    className="collapse nav flex-column ms-1"
-                    id="submenu2"
-                    data-bs-parent="#menu"
-                  >
-                    <li className="w-100">
-                      <a href="#" className="nav-link px-0">
-                        {" "}
-                        <span className="d-none d-sm-inline">Item</span> 1
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#" className="nav-link px-0">
-                        {" "}
-                        <span className="d-none d-sm-inline">Item</span> 2
-                      </a>
-                    </li>
-                  </ul>
-                </li>
-                <li>
-                  <a
-                    href="#submenu3"
-                    data-bs-toggle="collapse"
-                    className="nav-link px-0 align-middle"
-                  >
-                    <i className="fs-4 bi-grid"></i>{" "}
-                    <span className="ms-1 d-none d-sm-inline">Products</span>{" "}
-                  </a>
-                  <ul
-                    className="collapse nav flex-column ms-1"
-                    id="submenu3"
-                    data-bs-parent="#menu"
-                  >
-                    <li className="w-100">
-                      <a href="#" className="nav-link px-0">
-                        {" "}
-                        <span className="d-none d-sm-inline">Product</span> 1
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#" className="nav-link px-0">
-                        {" "}
-                        <span className="d-none d-sm-inline">Product</span> 2
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#" className="nav-link px-0">
-                        {" "}
-                        <span className="d-none d-sm-inline">Product</span> 3
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#" className="nav-link px-0">
-                        {" "}
-                        <span className="d-none d-sm-inline">Product</span> 4
-                      </a>
-                    </li>
-                  </ul>
-                </li>
-                <li>
-                  <a href="#" className="nav-link px-0 align-middle">
-                    <i className="fs-4 bi-people"></i>{" "}
-                    <span className="ms-1 d-none d-sm-inline">Customers</span>{" "}
-                  </a>
-                </li>
-              </ul>
-              <hr />
-              <div className="dropdown pb-4">
-                <a
-                  href="#"
-                  className="d-flex align-items-center text-white text-decoration-none dropdown-toggle"
-                  id="dropdownUser1"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
-                >
-                  <img
-                    src="https://github.com/mdo.png"
-                    alt="hugenerd"
-                    width="30"
-                    height="30"
-                    className="rounded-circle"
-                  />
-                  <span className="d-none d-sm-inline mx-1">loser</span>
+    <div className="flex h-screen">
+      {/* Sidebar */}
+      <div className="w-64 bg-gray-900 text-white flex flex-col">
+        <div className="flex flex-col p-4">
+          <button
+            onClick={toggleMenu}
+            className="text-white text-xl mb-4 flex items-center justify-between w-full"
+          >
+            CRM
+            <span className={isOpen ? "transform rotate-90" : ""}>
+              <i className="bi-chevron-right"></i>
+            </span>
+          </button>
+          {isOpen && (
+            <ul className="space-y-2">
+              <li>
+                <a href="#" className="flex items-center px-2 py-2 hover:bg-gray-700">
+                  <span>Contacts</span>
                 </a>
-                <ul className="dropdown-menu dropdown-menu-dark text-small shadow">
-                  <li>
-                    <a className="dropdown-item" href="#">
-                      New project...
-                    </a>
-                  </li>
-                  <li>
-                    <a className="dropdown-item" href="#">
-                      Settings
-                    </a>
-                  </li>
-                  <li>
-                    <a className="dropdown-item" href="#">
-                      Profile
-                    </a>
-                  </li>
-                  <li>
-                    <hr className="dropdown-divider" />
-                  </li>
-                  <li>
-                    <a className="dropdown-item" href="#">
-                      Sign out
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
+              </li>
+              <li>
+                <a href="#" className="flex items-center px-2 py-2 hover:bg-gray-700">
+                  <span>Companies</span>
+                </a>
+              </li>
+              <li>
+                <a href="#" className="flex items-center px-2 py-2 hover:bg-gray-700">
+                  <span>Deals</span>
+                </a>
+              </li>
+              <li>
+                <a href="#" className="flex items-center px-2 py-2 hover:bg-gray-700">
+                  <span>Tickets</span>
+                </a>
+              </li>
+              <li>
+                <a href="#" className="flex items-center px-2 py-2 hover:bg-gray-700">
+                  <span>Lists</span>
+                </a>
+              </li>
+              <li>
+                <a href="#" className="flex items-center px-2 py-2 hover:bg-gray-700">
+                  <span>Inbox</span>
+                </a>
+              </li>
+              <li>
+                <a href="#" className="flex items-center px-2 py-2 hover:bg-gray-700">
+                  <span>Calls</span>
+                </a>
+              </li>
+              <li>
+                <a href="#" className="flex items-center px-2 py-2 hover:bg-gray-700">
+                  <span>Tasks</span>
+                </a>
+              </li>
+            </ul>
+          )}
         </div>
       </div>
 
-      <ul className="list-group">
-        <li className="list-group-item">An item</li>
-        <li className="list-group-item active">A second item</li>
-        <li className="list-group-item">A third item</li>
-        <li className="list-group-item">A fourth item</li>
-        <li className="list-group-item">And a fifth one</li>
-      </ul>
-    </>
+      {/* Main Content */}
+      <div className="flex-1 bg-gray-100 p-6">
+        <div className="flex flex-col space-y-4">
+          <div className="bg-white shadow p-4 rounded">
+            <h2 className="text-xl font-bold">Contact Details</h2>
+            <p>Create Date: 7/26/2024 7:50 PM GMT+</p>
+            <p>Lifecycle Stage: Lead</p>
+            <p>Last Activity Date: --</p>
+          </div>
+          <div className="bg-white shadow p-4 rounded">
+            <h2 className="text-xl font-bold">Recent Activities</h2>
+            <p>No activities match the current filters.</p>
+          </div>
+          <div className="bg-white shadow p-4 rounded">
+            <h2 className="text-xl font-bold">Associated Records</h2>
+            <ul>
+              <li>Contacts (0)</li>
+              <li>Deals (0)</li>
+              <li>Tickets (0)</li>
+              <li>Payment Links (0)</li>
+              <li>Companies (0)</li>
+              <li>Subscriptions (0)</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
   );
 };
 
