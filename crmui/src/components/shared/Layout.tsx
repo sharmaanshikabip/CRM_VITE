@@ -1,4 +1,4 @@
-import React,{ useState } from "react";
+import React, { useState } from "react";
 import { Outlet } from "react-router-dom";
 import Sidebar from "../Sidebar";
 import Topnav from "../Topnav";
@@ -14,8 +14,8 @@ function Layout() {
   return (
     <>
       <div className="flex h-screen">
-      <ParentSidebar toggleSidebar={toggleChildSidebar} />
-      {isChildSidebarVisible && <ChildSidebar />}
+        <ParentSidebar toggleSidebar={toggleChildSidebar} />
+        {isChildSidebarVisible && <ChildSidebar />}
       </div>
       <div>
         <Topnav />

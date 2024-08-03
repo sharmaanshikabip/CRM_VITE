@@ -24,42 +24,66 @@ const Sidebar = () => {
           {isOpen && (
             <ul className="space-y-2">
               <li>
-                <a href="#" className="flex items-center px-2 py-2 hover:bg-gray-700">
+                <a
+                  href="#"
+                  className="flex items-center px-2 py-2 hover:bg-gray-700"
+                >
                   <span>Contacts</span>
                 </a>
               </li>
               <li>
-                <a href="#" className="flex items-center px-2 py-2 hover:bg-gray-700">
+                <a
+                  href="#"
+                  className="flex items-center px-2 py-2 hover:bg-gray-700"
+                >
                   <span>Companies</span>
                 </a>
               </li>
               <li>
-                <a href="#" className="flex items-center px-2 py-2 hover:bg-gray-700">
+                <a
+                  href="#"
+                  className="flex items-center px-2 py-2 hover:bg-gray-700"
+                >
                   <span>Deals</span>
                 </a>
               </li>
               <li>
-                <a href="#" className="flex items-center px-2 py-2 hover:bg-gray-700">
+                <a
+                  href="#"
+                  className="flex items-center px-2 py-2 hover:bg-gray-700"
+                >
                   <span>Tickets</span>
                 </a>
               </li>
               <li>
-                <a href="#" className="flex items-center px-2 py-2 hover:bg-gray-700">
+                <a
+                  href="#"
+                  className="flex items-center px-2 py-2 hover:bg-gray-700"
+                >
                   <span>Lists</span>
                 </a>
               </li>
               <li>
-                <a href="#" className="flex items-center px-2 py-2 hover:bg-gray-700">
+                <a
+                  href="#"
+                  className="flex items-center px-2 py-2 hover:bg-gray-700"
+                >
                   <span>Inbox</span>
                 </a>
               </li>
               <li>
-                <a href="#" className="flex items-center px-2 py-2 hover:bg-gray-700">
+                <a
+                  href="#"
+                  className="flex items-center px-2 py-2 hover:bg-gray-700"
+                >
                   <span>Calls</span>
                 </a>
               </li>
               <li>
-                <a href="#" className="flex items-center px-2 py-2 hover:bg-gray-700">
+                <a
+                  href="#"
+                  className="flex items-center px-2 py-2 hover:bg-gray-700"
+                >
                   <span>Tasks</span>
                 </a>
               </li>
