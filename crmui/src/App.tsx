@@ -1,19 +1,20 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Layout from "./components/shared/Layout";
-import Dashboard from "./components/Dashboard";
-import CreateOrder from "./components/CreateOrder";
+import React from 'react'
+import AllRoutes from './routes/Routes'
+import { configureFakeBackend } from './helpers'
 
-function App() {
-  return (
-    <Router>
-      <Routes>
-        <Route path="/" element={<Layout />}>
-          <Route index element={<Dashboard />} />
-          <Route path="/createOrder" element={<CreateOrder />} />
-        </Route>
-      </Routes>
-    </Router>
-  );
+// styles
+import 'gridjs/dist/theme/mermaid.min.css'
+import './index.scss'
+
+// configure fake backend
+configureFakeBackend()
+
+const App = () => {
+	return (
+		<React.Fragment>
+			<AllRoutes />
+		</React.Fragment>
+	)
 }
 
-export default App;
+export default App
