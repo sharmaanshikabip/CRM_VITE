@@ -15,10 +15,16 @@ export interface MenuItemTypes {
 
 const MENU_ITEMS: MenuItemTypes[] = [
 	{
+		key: 'home',
+		label: 'Home',
+		url: '/analytics',
+		icon: 'ri-home-office-fill',
+	},
+	{
 		key: 'dashboard',
 		label: 'Dashboard',
 		isTitle: false,
-		icon: 'ri-home-office-fill',
+		icon: 'ri-dashboard-fill',
 		children: [
 			{
 				key: 'snapshot',
