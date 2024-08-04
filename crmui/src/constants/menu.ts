@@ -23,7 +23,7 @@ const MENU_ITEMS: MenuItemTypes[] = [
 			{
 				key: 'snapshot',
 				label: 'Snapshot',
-				url: '#',
+				url: '/ecommerce',
 				icon: 'ri-line-chart-line',
 			}
 		],
