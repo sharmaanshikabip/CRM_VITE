@@ -15,61 +15,43 @@ export interface MenuItemTypes {
 
 const MENU_ITEMS: MenuItemTypes[] = [
 	{
-		key: 'crm',
-		label: 'CRM',
+		key: 'dashboard',
+		label: 'Dashboard',
 		isTitle: false,
-		icon: 'ri-shield-user-line',
+		icon: 'ri-home-office-fill',
 		children: [
 			{
-				key: 'Contacts',
-				label: 'Contacts',
-				url: '/apps/email/inbox',
-				parentKey: 'crm',
-			},
-			{
-				key: 'Companies',
-				label: 'Companies',
-				url: '/ui/tables/data-tables',
-				parentKey: 'crm',
-			},
-			{
-				key: 'Deals',
-				label: 'Deals',
-				url: '/apps/email/read',
-				parentKey: 'crm',
-			},
-			{
-				key: 'Tickets',
-				label: 'Tickets',
-				url: '/apps/email/read',
-				parentKey: 'crm',
-			},
-			{
-				key: 'Lists',
-				label: 'Lists',
-				url: '/apps/email/read',
-				parentKey: 'crm',
-			},
-			{
-				key: 'Inbox',
-				label: 'Inbox',
-				url: '/apps/email/read',
-				parentKey: 'crm',
-			},
-			{
-				key: 'Calls',
-				label: 'Calls',
-				url: '/apps/email/read',
-				parentKey: 'crm',
-			},
-			{
-				key: 'Tasks',
-				label: 'Tasks',
-				url: '/apps/email/read',
-				parentKey: 'crm',
+				key: 'snapshot',
+				label: 'Snapshot',
+				url: '#',
+				icon: 'ri-line-chart-line',
 			}
 		],
 	},
+	{
+		key: 'Contacts',
+		label: 'Contacts',
+		url: '/apps/email/inbox',
+		icon: 'ri-contacts-fill',
+	},
+	{
+		key: 'Companies',
+		label: 'Companies',
+		url: '/ui/tables/data-tables',
+		icon: 'ri-building-2-fill',
+	},
+	{
+		key: 'Deals',
+		label: 'Deals',
+		url: '/apps/email/read',
+		icon: 'ri-hand-coin-fill',
+	},
+	{
+		key: 'Tickets',
+		label: 'Tickets',
+		url: '/apps/email/read',
+		icon: 'ri-bug-fill',
+	}
 ]
 
 export { MENU_ITEMS }

@@ -46,7 +46,10 @@ const LeftSideBar = ({ hideLogo }: LeftSideBarProps) => {
 	return (
 		<React.Fragment>
 			<div className="app-menu" ref={menuNodeRef}>
-			<h1 className='text-3xl font-bold mb-2 text-center text-gray-100  mt-4'>CRM</h1>
+				<h1 className="text-3xl font-bold mb-2 text-center text-gray-100  mt-4">
+					<i className="ri-menu-line"></i>
+					CRM
+				</h1>
 
 				<button id="button-hover-toggle" className="absolute top-5 end-2 rounded-full p-1.5 z-50" onClick={handleHoverMenu}>
 					<span className="sr-only">Menu Toggle Button</span>
