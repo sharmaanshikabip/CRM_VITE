@@ -1,148 +1,89 @@
-import { Grid } from 'gridjs-react'
+import React, { useEffect } from 'react';
+import { Grid } from 'gridjs-react';
+import { useNavigate } from 'react-router-dom';
+import { html } from 'gridjs';
 
 // Components
-import { PageBreadcrumb } from '../../../components'
+import { PageBreadcrumb } from '../../../components';
 
-//dummy data
-import { dataTableRecords } from './data'
+// Dummy data
+import { dataTableRecords } from './data';
 
 const DataTables = () => {
-	return (
-		<>
-			<PageBreadcrumb title="Data Table" subName="Table" />
-			<div className="flex flex-col gap-6">
-				<div className="card">
-					<div className="card-header">
-						<div className="flex justify-between items-center">
-							<h4 className="card-title">Basic</h4>
-						</div>
-					</div>
-					<div className="p-6">
-						<p className="text-sm text-slate-700 dark:text-slate-400 mb-4">The most basic list group is an unordered list with list items and the proper classes. Build upon it with the options that follow, or with your own CSS as needed.</p>
+  const navigate = useNavigate();
 
-						<Grid data={dataTableRecords} pagination={{ enabled: true, limit: 5 }} search={true} sort={true} />
-					</div>
-				</div>
+  // Format data to include ID as the first column
+  const formattedData = dataTableRecords.map(record => [
+    record.id,
+    record.companyName,
+    record.companyOwner,
+    record.createDate,
+    record.phoneNumber,
+    record.lastActivityDate,
+  ]);
 
-				<div className="card">
-					<div className="card-header">
-						<div className="flex justify-between items-center">
-							<h4 className="card-title">Pagination</h4>
-						</div>
-					</div>
-					<div className="p-6">
-						<p className="text-sm text-slate-700 dark:text-slate-400 mb-4">
-							Pagination can be enabled by setting <code>pagination: true</code>:
-						</p>
+  // Handle navigation based on cell click
+  const handleCellClick = (id: any) => {
+    navigate(`/company/${id}`);
+  };
 
-						<Grid data={dataTableRecords} pagination={{ enabled: true, limit: 5 }} />
-					</div>
-				</div>
+  useEffect(() => {
+    const grid = document.querySelector('.gridjs-container');
+    if (grid) {
+      grid.addEventListener('click', function(event) {
+        if (event.target.tagName === 'TD' && event.target.cellIndex === 1) {
+          const rowElement = event.target.closest('TR');
+          if (rowElement) {
+            const id = rowElement.children[0].textContent;
+            if (id) {
+              handleCellClick(id);
+            }
+          }
+        }
+      });
+    }
+  }, []);
 
-				<div className="card">
-					<div className="card-header">
-						<div className="flex justify-between items-center">
-							<h4 className="card-title">Search</h4>
-						</div>
-					</div>
-					<div className="p-6">
-						<p className="text-sm text-slate-700 dark:text-slate-400 mb-4">
-							Grid.js supports global search on all rows and columns. Set <code>search: true</code> to enable the search plugin:
-						</p>
+  return (
+    <>
+      <PageBreadcrumb title="Data Table" subName="Table" />
+      <div className="flex flex-col gap-6">
+        <div className="card">
+          <div className="card-header">
+            <div className="flex justify-between items-center">
+              {/* Any additional header content */}
+            </div>
+          </div>
+          <div className="p-6">
+            <Grid
+              columns={[
+                { name: 'ID', hidden: true },
+                {
+                  name: 'Company Name',
+                  formatter: (cell: any) => html(
+                    `<span class="company-name">${cell}</span>`
+                  ),
+                },
+                'Company Owner',
+                'Create Date',
+                'Phone Number',
+                'Last Activity Date',
+              ]}
+              data={formattedData}
+              sort={true}
+              search={true}
+              pagination={{ enabled: true, limit: 5 }}
+              style={{
+                td: {
+                  cursor: 'pointer'
+                }
+              }}
+            />
+          </div>
+        </div>
+      </div>
+    </>
+  );
+};
 
-						<Grid data={dataTableRecords} pagination={{ enabled: true, limit: 5 }} search={true} />
-					</div>
-				</div>
-
-				<div className="card">
-					<div className="card-header">
-						<div className="flex justify-between items-center">
-							<h4 className="card-title">Sorting</h4>
-						</div>
-					</div>
-					<div className="p-6">
-						<p className="text-sm text-slate-700 dark:text-slate-400 mb-4">
-							To enable sorting, simply add <code>sort: true</code> to your config:
-						</p>
-
-						<Grid data={dataTableRecords} pagination={{ enabled: true, limit: 5 }} sort={true} />
-					</div>
-				</div>
-
-				<div className="card">
-					<div className="card-header">
-						<div className="flex justify-between items-center">
-							<h4 className="card-title">Loading State</h4>
-						</div>
-					</div>
-					<div className="p-6">
-						<p className="text-sm text-slate-700 dark:text-slate-400 mb-4">Grid.js renders a loading bar automatically while it waits for the data to be fetched. Here we are using an async function to demonstrate this behaviour (e.g. an async function can be a XHR call to a server backend)</p>
-
-						<Grid
-							columns={['Name', 'Email', 'Phone Number']}
-							sort={true}
-							search={true}
-							data={() => {
-								return new Promise((resolve) => {
-									setTimeout(
-										() =>
-											resolve([
-												['John', 'john@example.com', '(353) 01 222 3333'],
-												['Mark', 'mark@gmail.com', '(01) 22 888 4444'],
-											]),
-										4000
-									)
-								})
-							}}
-						/>
-					</div>
-				</div>
-
-				<div className="card">
-					<div className="card-header">
-						<div className="flex justify-between items-center">
-							<h4 className="card-title">Fixed Header</h4>
-						</div>
-					</div>
-					<div className="p-6">
-						<p className="text-sm text-slate-700 dark:text-slate-400 mb-4">The most basic list group is an unordered list with list items and the proper classes. Build upon it with the options that follow, or with your own CSS as needed.</p>
-
-						<Grid data={dataTableRecords} columns={['id', 'name', 'email', 'position', 'company', 'country']} height="300px" fixedHeader={true} pagination={{ enabled: true, limit: 10 }} />
-					</div>
-				</div>
-
-				<div className="card">
-					<div className="card-header">
-						<div className="flex justify-between items-center">
-							<h4 className="card-title">Hidden Columns</h4>
-						</div>
-					</div>
-					<div className="p-6">
-						<p className="text-sm text-slate-700 dark:text-slate-400 mb-4">
-							Add <code>hidden: true</code> to the columns definition to hide them.{' '}
-						</p>
-
-						<Grid
-							data={dataTableRecords}
-							columns={[
-								{
-									id: 'id',
-									hidden: true,
-								},
-								'name',
-								'email',
-								'position',
-								'company',
-								'country',
-							]}
-							sort={true}
-							pagination={{ enabled: true, limit: 5 }}
-						/>
-					</div>
-				</div>
-			</div>
-		</>
-	)
-}
-
-export default DataTables
+export default DataTables;

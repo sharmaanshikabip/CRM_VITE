@@ -266,8 +266,8 @@ const customPagesRoutes = {
 			route: PrivateRoute,
 		},
 		{
-			path: '/pages/profile',
-			name: 'Profile',
+			path: '/company/:id',
+			name: 'Company',
 			element: <ProfilePages />,
 			route: PrivateRoute,
 		},
@@ -688,8 +688,8 @@ const uiRoutes: RoutesProps = {
 					route: PrivateRoute,
 				},
 				{
-					path: '/ui/tables/data-tables',
-					name: 'Data Tables',
+					path: '/company',
+					name: 'Company',
 					element: <DataTables />,
 					route: PrivateRoute,
 				},

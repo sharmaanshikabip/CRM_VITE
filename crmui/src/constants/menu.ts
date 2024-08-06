@@ -43,7 +43,7 @@ const MENU_ITEMS: MenuItemTypes[] = [
 	{
 		key: 'Companies',
 		label: 'Companies',
-		url: '/ui/tables/data-tables',
+		url: '/company',
 		icon: 'ri-building-2-fill',
 	},
 	{
@@ -55,7 +55,7 @@ const MENU_ITEMS: MenuItemTypes[] = [
 	{
 		key: 'Tickets',
 		label: 'Tickets',
-		url: '/apps/email/read',
+		url: '/company/:id',
 		icon: 'ri-bug-fill',
 	}
 ]

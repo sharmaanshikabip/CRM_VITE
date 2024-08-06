@@ -16,6 +16,7 @@ interface TableRecord {
 	image: string
 	cell: string
 	activeClass?: string
+	url?: string
 }
 
 interface ExpandableRecord {
@@ -177,43 +178,43 @@ const nestedrecords: NestedRecords[] = [
 const dataTableRecords: Employee[] = [
 	{
 		id: 1,
-		name: 'Jonathan',
-		email: 'jonathan@example.com',
-		position: 'Senior Implementation Architect',
-		company: 'Hauck Inc',
-		country: 'Holy See',
+		companyName: 'Jonathan',
+		companyOwner: 'jonathan@example.com',
+		createDate: 'Senior Implementation Architect',
+		phoneNumber: 'Hauck Inc',
+		lastActivityDate: 'Holy See',
 	},
 	{
 		id: 2,
-		name: 'Harold',
-		email: 'harold@example.com',
-		position: 'Forward Creative Coordinator',
-		company: 'Metz Inc',
-		country: 'Iran',
+		companyName: 'Jon',
+		companyOwner: 'jon@example.com',
+		createDate: 'Senior Implementation Architect',
+		phoneNumber: 'Hauck Inc',
+		lastActivityDate: 'Holy See',
 	},
 	{
 		id: 3,
-		name: 'Shannon',
-		email: 'shannon@example.com',
-		position: 'Legacy Functionality Associate',
-		company: 'Zemlak Group',
-		country: 'South Georgia',
+		companyName: 'Shannon',
+		companyOwner: 'shannon@example.com',
+		createDate: 'Senior Implementation Architect',
+		phoneNumber: 'Hauck Inc',
+		lastActivityDate: 'Holy See',
 	},
 	{
 		id: 4,
-		name: 'Robert',
-		email: 'robert@example.com',
-		position: 'Product Accounts Technician',
-		company: 'Hoeger',
-		country: 'San Marino',
+		companyName: 'Robert',
+		companyOwner: 'shannon@example.com',
+		createDate: 'Senior Implementation Architect',
+		phoneNumber: 'Hauck Inc',
+		lastActivityDate: 'Holy See',
 	},
 	{
 		id: 5,
-		name: 'Noel',
-		email: 'noel@example.com',
-		position: 'Customer Data Director',
-		company: 'Howell - Rippin',
-		country: 'Germany',
+		companyName: 'Noel',
+		companyOwner: 'shannon@example.com',
+		createDate: 'Senior Implementation Architect',
+		phoneNumber: 'Hauck Inc',
+		lastActivityDate: 'Holy See',
 	},
 	{
 		id: 6,

@@ -6,6 +6,11 @@ export type TableRecord = {
 }
 
 export type Employee = {
+	lastActivityDate: any
+	phoneNumber: any
+	createDate: any
+	companyOwner: any
+	companyName: any
 	id: number
 	name: string
 	email: string
