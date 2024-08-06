@@ -54,7 +54,6 @@ const LeftSideBar = ({ hideLogo }: LeftSideBarProps) => {
 				<button id="button-hover-toggle" className="absolute top-5 end-2 rounded-full p-1.5 z-50" onClick={handleHoverMenu}>
 					<span className="sr-only">Hide/Show</span>
 					<i className="ri-checkbox-blank-circle-line text-xl"></i>
-					test
 				</button>
 
 				<SimpleBar className="scrollbar">
