@@ -179,6 +179,7 @@ const dataTableRecords: Employee[] = [
 	{
 		id: 1,
 		companyName: 'Jonathan',
+		companyDetailLink:'Jonathan_details',
 		companyOwner: 'jonathan@example.com',
 		createDate: 'Senior Implementation Architect',
 		phoneNumber: 'Hauck Inc',
@@ -187,6 +188,7 @@ const dataTableRecords: Employee[] = [
 	{
 		id: 2,
 		companyName: 'Jon',
+		companyDetailLink:'Jon_details',
 		companyOwner: 'jon@example.com',
 		createDate: 'Senior Implementation Architect',
 		phoneNumber: 'Hauck Inc',
@@ -195,6 +197,7 @@ const dataTableRecords: Employee[] = [
 	{
 		id: 3,
 		companyName: 'Shannon',
+		companyDetailLink:'Shannon_details',
 		companyOwner: 'shannon@example.com',
 		createDate: 'Senior Implementation Architect',
 		phoneNumber: 'Hauck Inc',
@@ -203,6 +206,7 @@ const dataTableRecords: Employee[] = [
 	{
 		id: 4,
 		companyName: 'Robert',
+		companyDetailLink:'Robert_details',
 		companyOwner: 'shannon@example.com',
 		createDate: 'Senior Implementation Architect',
 		phoneNumber: 'Hauck Inc',
@@ -211,6 +215,7 @@ const dataTableRecords: Employee[] = [
 	{
 		id: 5,
 		companyName: 'Noel',
+		companyDetailLink:'Noel_details',
 		companyOwner: 'shannon@example.com',
 		createDate: 'Senior Implementation Architect',
 		phoneNumber: 'Hauck Inc',

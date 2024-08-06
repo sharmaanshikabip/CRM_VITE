@@ -16,5 +16,6 @@ export type Employee = {
 	email: string
 	position: string
 	company: string
-	country: string
+	country: string,
+	companyDetailLink:string
 }

@@ -16,6 +16,7 @@ const DataTables = () => {
   const formattedData = dataTableRecords.map(record => [
     record.id,
     record.companyName,
+	record.companyDetailLink,
     record.companyOwner,
     record.createDate,
     record.phoneNumber,
@@ -64,6 +65,7 @@ const DataTables = () => {
                     `<span class="company-name">${cell}</span>`
                   ),
                 },
+				'Company Detail link',
                 'Company Owner',
                 'Create Date',
                 'Phone Number',
