@@ -35,28 +35,34 @@ const MENU_ITEMS: MenuItemTypes[] = [
 		],
 	},
 	{
-		key: 'Contacts',
+		key: 'contacts',
 		label: 'Contacts',
 		url: '/contact',
 		icon: 'ri-contacts-fill',
 	},
 	{
-		key: 'Companies',
+		key: 'companies',
 		label: 'Companies',
 		url: '/company',
 		icon: 'ri-building-2-fill',
 	},
 	{
-		key: 'Deals',
+		key: 'deals',
 		label: 'Deals',
 		url: '/deals',
 		icon: 'ri-hand-coin-fill',
 	},
 	{
-		key: 'Tickets',
+		key: 'tickets',
 		label: 'Tickets',
 		url: '/ticket',
 		icon: 'ri-bug-fill',
+	},
+	{
+		key: 'leads',
+		label: 'Leads',
+		url: '/company',
+		icon: 'ri-award-fill',
 	}
 ]
 
