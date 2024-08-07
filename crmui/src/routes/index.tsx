@@ -1,5 +1,6 @@
 import React from 'react'
 import { Navigate, Route, RouteProps } from 'react-router-dom'
+import DataTableCompany from '../pages/ui/tables/DataTableCompany'
 
 // components
 import PrivateRoute from './PrivateRoute'
@@ -114,7 +115,10 @@ const Editors = React.lazy(() => import('../pages/ui/forms/Editors'))
 
 // tables
 const BasicTables = React.lazy(() => import('../pages/ui/tables/BasicTables'))
-const DataTables = React.lazy(() => import('../pages/ui/tables/DataTables'))
+const DataTables = React.lazy(() => import('../pages/ui/tables/DataTableCompany'))
+const DataTableContact = React.lazy(() => import('../pages/ui/tables/DataTableContact'))
+const DataTableDeals= React.lazy(() => import('../pages/ui/tables/DataTableDeals'))
+const DataTableHome= React.lazy(() => import('../pages/ui/tables/DataTableHome'))
 
 // maps
 const GoogleMaps = React.lazy(() => import('../pages/ui/maps/GoogleMaps'))
@@ -137,172 +141,9 @@ export interface RoutesProps {
 	children?: RoutesProps[]
 }
 
-// dashboards
-const dashboardRoutes: RoutesProps = {
-	path: '/dashboard',
-	name: 'Dashboards',
-	icon: 'home',
-	header: 'Navigation',
-	children: [
-		{
-			path: '/',
-			name: 'Root',
-			element: <Navigate to="/analytics" />,
-			route: PrivateRoute,
-		},
-		{
-			path: '/ecommerce',
-			name: 'Ecommerce',
-			element: <Ecommerce />,
-			route: PrivateRoute,
-		},
-		{
-			path: '/analytics',
-			name: 'Analytics',
-			element: <Analytics />,
-			route: PrivateRoute,
-		},
-	],
-}
 
-// Apps
-const calendarAppRoutes: RoutesProps = {
-	path: '/apps/calendar',
-	name: 'Calendar',
-	route: PrivateRoute,
-	roles: ['Admin'],
-	icon: 'calendar',
-	element: <CalendarApp />,
-	header: 'Apps',
-}
 
-const chatAppRoutes: RoutesProps = {
-	path: '/apps/chat',
-	name: 'Chat',
-	route: PrivateRoute,
-	roles: ['Admin'],
-	icon: 'chat',
-	element: <ChatApp />,
-	header: 'Apps',
-}
 
-const emailAppRoutes: RoutesProps = {
-	path: '/apps/email',
-	name: 'Email',
-	route: PrivateRoute,
-	roles: ['Admin'],
-	icon: 'email',
-	children: [
-		{
-			path: '/apps/email/inbox',
-			name: 'Inbox',
-			element: <EmailInbox />,
-			route: PrivateRoute,
-		},
-		{
-			path: '/apps/email/read',
-			name: 'Read Email',
-			element: <EmailRead />,
-			route: PrivateRoute,
-		},
-	],
-}
-
-const tasksAppRoutes: RoutesProps = {
-	path: '/apps/tasks',
-	name: 'Tasks',
-	route: PrivateRoute,
-	roles: ['Admin'],
-	icon: 'task',
-	children: [
-		{
-			path: '/apps/tasks/list',
-			name: 'List',
-			element: <TasksList />,
-			route: PrivateRoute,
-		},
-		{
-			path: '/apps/tasks/details',
-			name: 'Details',
-			element: <TasksDetails />,
-			route: PrivateRoute,
-		},
-	],
-}
-
-const kanbanAppRoutes: RoutesProps = {
-	path: '/apps/kanban',
-	name: 'Kanban Board',
-	route: PrivateRoute,
-	roles: ['Admin'],
-	icon: 'kanban',
-	element: <KanbanApp />,
-	header: 'Apps',
-}
-
-const fileAppRoutes: RoutesProps = {
-	path: '/apps/file-manager',
-	name: 'File Manager',
-	route: PrivateRoute,
-	roles: ['Admin'],
-	icon: 'filemanager',
-	element: <FileManagerApp />,
-	header: 'Apps',
-}
-
-const appRoutes = [calendarAppRoutes, chatAppRoutes, emailAppRoutes, tasksAppRoutes, kanbanAppRoutes, fileAppRoutes]
-
-// pages
-const customPagesRoutes = {
-	path: '/pages',
-	name: 'Pages',
-	icon: 'pages',
-	header: 'Custom',
-	children: [
-		{
-			path: '/pages/starter',
-			name: 'Starter Page',
-			element: <StarterPages />,
-			route: PrivateRoute,
-		},
-		{
-			path: '/company/:id',
-			name: 'Company',
-			element: <ProfilePages />,
-			route: PrivateRoute,
-		},
-		{
-			path: '/pages/timeline',
-			name: 'Timeline',
-			element: <TimelinePages />,
-			route: PrivateRoute,
-		},
-		{
-			path: '/pages/invoice',
-			name: 'Invoice',
-			element: <InvoicePages />,
-			route: PrivateRoute,
-		},
-		{
-			path: '/pages/faq',
-			name: 'FAQ',
-			element: <FAQPages />,
-			route: PrivateRoute,
-		},
-		{
-			path: '/pages/pricing',
-			name: 'Pricing',
-			element: <PricingPages />,
-			route: PrivateRoute,
-		},
-		{
-			path: '/error-404-alt',
-			name: 'Error - 404-alt',
-			element: <Error404Alt />,
-			route: PrivateRoute,
-		},
-	],
-}
 
 // ui
 const uiRoutes: RoutesProps = {
@@ -690,6 +531,48 @@ const uiRoutes: RoutesProps = {
 				{
 					path: '/company',
 					name: 'Company',
+					element: <DataTableCompany />,
+					route: PrivateRoute,
+				},
+				{
+					path: '/home',
+					name: 'Company',
+					element: <DataTableHome />,
+					route: PrivateRoute,
+				},
+				{
+					path: '/company/:id',
+					name: 'Company',
+					element: <ProfilePages />,
+					route: PrivateRoute,
+				},
+				{
+					path: '/tickets',
+					name: 'Company',
+					element: <DataTables />,
+					route: PrivateRoute,
+				},
+				{
+					path: '/contact',
+					name: 'Inbox',
+					element: <DataTableContact />,
+					route: PrivateRoute,
+				},
+				{
+					path: '/deals',
+					name: 'Read Email',
+					element: <DataTableDeals />,
+					route: PrivateRoute,
+				},
+				{
+					path: '/snapshot',
+					name: 'Read Email',
+					element: <DataTables />,
+					route: PrivateRoute,
+				},
+				{
+					path: '/ticket',
+					name: 'Read Email',
 					element: <DataTables />,
 					route: PrivateRoute,
 				},
@@ -835,7 +718,7 @@ const flattenRoutes = (routes: RoutesProps[]) => {
 }
 
 // All routes
-const authProtectedRoutes = [dashboardRoutes, ...appRoutes, customPagesRoutes, uiRoutes]
+const authProtectedRoutes = [uiRoutes]
 const publicRoutes = [...authRoutes, ...otherPublicRoutes]
 
 const authProtectedFlattenRoutes = flattenRoutes([...authProtectedRoutes])
