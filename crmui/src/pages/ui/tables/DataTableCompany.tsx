@@ -9,7 +9,7 @@ import { PageBreadcrumb } from '../../../components';
 // Dummy data
 import { dataTableRecords } from './data';
 
-const DataTables = () => {
+const DataTableCompany = () => {
   const navigate = useNavigate();
 
   // Format data to include ID as the first column
@@ -88,4 +88,4 @@ const DataTables = () => {
   );
 };
 
-export default DataTables;
+export default DataTableCompany;

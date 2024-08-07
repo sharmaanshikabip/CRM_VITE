@@ -17,7 +17,7 @@ const MENU_ITEMS: MenuItemTypes[] = [
 	{
 		key: 'home',
 		label: 'Home',
-		url: '/analytics',
+		url: '/home',
 		icon: 'ri-home-office-fill',
 	},
 	{
@@ -29,7 +29,7 @@ const MENU_ITEMS: MenuItemTypes[] = [
 			{
 				key: 'snapshot',
 				label: 'Snapshot',
-				url: '/ecommerce',
+				url: '/snapshot',
 				icon: 'ri-line-chart-line',
 			}
 		],
@@ -37,7 +37,7 @@ const MENU_ITEMS: MenuItemTypes[] = [
 	{
 		key: 'Contacts',
 		label: 'Contacts',
-		url: '/apps/email/inbox',
+		url: '/contact',
 		icon: 'ri-contacts-fill',
 	},
 	{
@@ -49,13 +49,13 @@ const MENU_ITEMS: MenuItemTypes[] = [
 	{
 		key: 'Deals',
 		label: 'Deals',
-		url: '/apps/email/read',
+		url: '/deals',
 		icon: 'ri-hand-coin-fill',
 	},
 	{
 		key: 'Tickets',
 		label: 'Tickets',
-		url: '/company/:id',
+		url: '/ticket',
 		icon: 'ri-bug-fill',
 	}
 ]
