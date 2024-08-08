@@ -262,5 +262,88 @@ const dataTableRecords: Employee[] = [
 		country: 'Qatar',
 	},
 ]
+const dataTableContactRecords: Employee[] = [
+	{
+		id: 1,
+		companyName: 'Jonathan',
+		email: 'jonathan@example.com',
+		phoneNumber: 'Hauck Inc',
+		contactOwner: 'Holy See',
+		primaryCompany:'Holy See',
+	},
+	{
+		id: 2,
+		companyName: 'Jon',
+		email: 'jonathan@example.com',
+		phoneNumber: 'Hauck Inc',
+		contactOwner: 'Holy See',
+		primaryCompany:'Holy See',
+	},
+	{
+		id: 3,
+		companyName: 'Shannon',
+		email: 'shannon@example.com',
+		phoneNumber: 'Hauck Inc',
+		contactOwner: 'Holy See',
+		primaryCompany:'Holy See',
+	},
+	{
+		id: 4,
+		companyName: 'Robert',
+		email: 'shannon@example.com',
+		phoneNumber: 'Hauck Inc',
+		contactOwner: 'Holy See',
+		primaryCompany:'Holy See',
+	},
+	{
+		id: 5,
+		companyName: 'Noel',
+		email: 'shannon@example.com',
+		phoneNumber: 'Hauck Inc',
+		contactOwner: 'Holy See',
+		primaryCompany:'Holy See',
+	},
+	{
+		id: 6,
+		name: 'Traci',
+		email: 'traci@example.com',
+		phoneNumber: 'Hauck Inc',
+		contactOwner: 'Holy See',
+		primaryCompany:'Holy See',
+	},
+	{
+		id: 7,
+		name: 'Kerry',
+		email: 'kerry@example.com',
+		position: 'Lead Applications Associate',
+		company: 'Feeney, Langworth and Tremblay',
+		country: 'Niger',
+	},
+	{
+		id: 8,
+		name: 'Patsy',
+		email: 'patsy@example.com',
+		position: 'Dynamic Assurance Director',
+		company: 'Streich Group',
+		country: 'Niue',
+	},
+	{
+		id: 9,
+		name: 'Cathy',
+		email: 'cathy@example.com',
+		position: 'Customer Data Director',
+		company: 'Ebert, Schamberger and Johnston',
+		country: 'Mexico',
+	},
+	{
+		id: 10,
+		name: 'Tyrone',
+		email: 'tyrone@example.com',
+		position: 'Senior Response Liaison',
+		company: 'Raynor, Rolfson and Daugherty',
+		country: 'Qatar',
+	},
+]
 
-export { records, expandablerecords, nestedrecords, dataTableRecords }
+
+export { records, expandablerecords, nestedrecords, dataTableRecords,dataTableContactRecords }

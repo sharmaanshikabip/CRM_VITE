@@ -7,20 +7,18 @@ import { html } from 'gridjs';
 import { PageBreadcrumb } from '../../../components';
 
 // Dummy data
-import { dataTableRecords } from './data';
+import { dataTableContactRecords } from './data';
 
 const DataTableContact = () => {
   const navigate = useNavigate();
 
   // Format data to include ID as the first column
-  const formattedData = dataTableRecords.map(record => [
+  const formattedData = dataTableContactRecords.map(record => [
     record.id,
     record.companyName,
-	record.companyDetailLink,
-    record.companyOwner,
-    record.createDate,
-    record.phoneNumber,
-    record.lastActivityDate,
+    record.email,
+    record.contactOwner,
+    record.primaryCompany,
   ]);
 
   // Handle navigation based on cell click
@@ -65,11 +63,10 @@ const DataTableContact = () => {
                     `<span class="company-name">${cell}</span>`
                   ),
                 },
-				'Company Detail link',
-                'Company Owner',
-                'Create Date',
+                'Email',
                 'Phone Number',
-                'Last Activity Date',
+                'Contact Owner',
+                'Primary Company'
               ]}
               data={formattedData}
               sort={true}
